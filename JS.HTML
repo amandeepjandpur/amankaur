@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head><title>JAVASCRIPT</title>
+
+        <BODY>
+            <h1 style="text-align:center;color: #A555EC;">JAVASCRIPT TUTORIAL</h1>
+            <img src="Javascript (2).jpg" height="200" class="LEFT">
+            <H2 STYLE="FONT-SIZE:40PX;color: #25265e;">Getting Started With JavaScript</H2>
+            <P STYLE="FONT-SIZE:20PX;">JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive e.g., having complex animations, clickable buttons, popup menus, etc.
+                There are also more advanced server side versions of JavaScript such as Node.js, React js, vue js etc.</P>
+<H3  STYLE="FONT-SIZE:40PX;color: plum;">JavaScript and the ECMAScript specification</H3>
+<P  STYLE="FONT-SIZE:20PX;">JavaScript is standardized at Ecma International — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called ECMAScript, behaves the same way in all applications that support the standard.</P>
+           <IMG src="js-features.svg">
+            <H4 style="font-size: 40PX;">1:Validating User's Input :</H4>
+            
+<P style="font-size: 20PX;">JavaScript is very useful while using forms. It has the capability to validate user input for errors and also saves time. If the user leaves a required field empty or the information is incorrect, JavaScript checks for them before sending the data over to the server.
+</P>
+<H4  STYLE="FONT-SIZE:40PX; color: aquamarine;">For example :</H4>
+<P STYLE="FONT-SIZE:20PX;">Click the radio button to toggle between password visibility:
+
+    Password: <input type="password" value="FakePSW" id="myInput"><br><br>
+    <input type="checkbox" onclick="myFunction()">Show Password
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+    <H5 STYLE="FONT-SIZE:40PX;">2:Event handling :</H5>
+    <P STYLE="FONT-SIZE:20PX;">An event is an action or an occurrence in a system that communicates about said occurrence so that you can respond to it somehow. For example, a user clicks on a button, and the system tells you to respond to the button click event with an action, say an information box.</P>
+    <style>
+        .keyboard-shortcut {
+        border: 1px solid #ddd;
+        padding: 1%;
+        color: #25265e;
+        display: inline-block;
+        margin: 0 1%;
+        border-radius: 4px;
+        }
+        .countme{
+        display: flex;
+        align-items: center;
+        width: 30%;
+        cursor: pointer;
+        font-family: Calibri;
+        border: 1px solid #ddd;
+        color: #25265e;
+        }
+        .countme .count{
+        margin-left: 9%;
+        display: inline-block;
+        }
+        .countme i.bxs-heart{
+        color:blue;
+        margin: 0 6%;
+        }
+        </style>
+        </head>
+        <body>
+        <div class="keyboard-shortcut countme"><i class='bx bx-sm bxs-heart'></i>Likes count <span class="count"> 0</span> </div>
+        </body>
+        <script>
+        let countbtn = document.querySelector(".countme");
+        let btncount = document.querySelector(".count");
+        let count = 0;
+        countbtn.addEventListener("click", () =>{
+        count++;
+        btncount.innerHTML = count;
+        });
+        </script>
+        <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+        
+    <H6  STYLE="FONT-SIZE:40PX;color: brown;">3:Greater control :</H6>    
+    <P  STYLE="FONT-SIZE:20PX;">JavaScript provides greater control to the browser rather than being completely dependent on the web servers. JavaScript provides additional functionalities that help reduce server load and network traffic</P>   
+    <H7 STYLE="FONT-SIZE:40PX;color: blueviolet;">4:Platform Independent</H7> 
+    <P STYLE="FONT-SIZE:20PX;">JavaScript is Platform Independent, which means you need to write the script once and can run it on any platform or browser without affecting the output of the Script.. Thus it can run on Windows, Macintosh, and other browser-supported systems.
+    </P>
+    <IMG SRC="js-features-1.svg"><BR>
+
+        <H8 STYLE="FONT-SIZE:40PX;color: chocolate;">5:Generating HTML Content</H8><BR>
+        <P STYLE="FONT-SIZE:20PX;">JavaScript has very handy features to dynamically generate HTML content for the web. It allows us to add text, links, images, tables, etc. or to change html content design after an event occurrence.</P>
+      <P STYLE="FONT-SIZE:20PX;">For example :</P>
+        <style>
+            button.btn-design{
+            margin: 2% 0;
+            background-color: #A555EC;
+            color: white;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            box-shadow: 0 12px 18px rgba(0,0,0,0.05);
+            padding: 2%;
+            }
+            </style>
+            </head>
+            <body>
+            <button class="btn-design" id="colorsChangeblock">Click me to change my background color</button>
+            </body>
+            <script>
+            let colorChangeBtn = document.querySelector("#colorsChangeblock");
+            let colorsList = ["#A555EC","#ffb013","#0556f3","#332FD0","#FF7000","#22A39F","#0014FF","#001253","#FF6464","#54B435"]
+            let colorCount = 0;
+            colorChangeBtn.onclick= () => {
+            colorCount++;
+            for(let i=0;i<colorsList.length;i++){
+            if(i == colorCount){
+            colorChangeBtn.style.backgroundColor = colorsList[i];
+            }
+            if(colorCount>colorsList.length){
+            colorCount = -1;
+            }
+            }
+            }
+            </script><BR>
+</P>
+</H9>
+<H 10 STYLE="text-align:RIGHT;">FOR MORE INFORMATION CLICK HERE:</H>
+<A href="https://youtube.com/playlist?list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR">CODE WITH HARRY</A>
+</BODY>
+        
+    </head>
+</html>
